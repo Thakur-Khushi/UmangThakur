@@ -25,8 +25,7 @@ body {
 }
 
 .img-w {
-  width: 100%;
-  height: auto;
+  border-radius: 50%;
 }
 
 /* Nav */
@@ -515,58 +514,7 @@ li a:hover {
 }
 
 /* education */
-.heading {
-  font-size: 1.6rem;
-  text-align: center;
-  margin: 5rem 0;
-}
-.education {
-  padding: 100px 15px;
-  background-color: #8193ae;
-}
-.education h2 {
-  margin-bottom: 5rem;
-}
-.timeline-items {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-}
-.timeline-items::before {
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  background-color: #8193ae;
-  left: calc(50% -1px);
-}
-.timeline-item {
-  margin-bottom: 40px;
-  width: 100%;
-  position: relative;
-}
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
-.timeline-item:nth-child(odd) {
-  padding-right: calc(50% +30px);
-  text-align: right;
-}
-.timeline-item:last-child(even) {
-  padding-left: calc(50% +30px);
-}
-.timeline-dot {
-  height: 21px;
-  width: 21px;
-  background-color: #f9532d;
-  box-shadow: 0 0 25px var(--primary-dark), 0 0 25px var(--primary-dark);
-  position: absolute;
-  left: calc(50% - 8px);
-  border-radius: 50%;
-  top: 10px;
-}
+
 /* work */
 .work_container {
   grid-template-columns: repeat(2, 1fr);
