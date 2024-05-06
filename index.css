@@ -27,6 +27,25 @@ body {
   width: 100%;
   height: auto;
 }
+
+.section_title, 
+.section_subtitle {
+  text-align: center;
+}
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section_title {
+  font-size:2.25rem;
+  color: #EEEEEE;
+}
+
+.section_subtitle {
+  display: block;
+  font-size:.875rem;
+  margin-bottom: 3rem;
+}
 /* Nav */
 header {
   background: var(--primary-dark);
@@ -130,7 +149,7 @@ li a:hover {
 .main button {
   background-color: transparent;
   color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  border: 2px solid #FD7014;
   padding: 0.8rem 1rem;
   font-size: 1.1rem;
   border-radius: 7px;
@@ -375,7 +394,7 @@ li a:hover {
 }
 
 .about_img {
-  width: 380pxpx;
+  width: 220px;
   border-radius: 1.5rem;
   justify-self: center;
 }
@@ -711,8 +730,6 @@ margin-bottom: 1.5rem;
 .contact_form-area textarea{
   resize: none;
 }
-
-
 /* FOOTER */
 
 
