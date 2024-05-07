@@ -49,11 +49,15 @@ body {
 /* Nav */
 header {
   background: var(--primary-dark);
-  position: relative;
+  position: fixed;
   box-shadow: 0 4px 17px rgb(255 255 255 / 10%);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 100;
+  width: 100%;
+  background: var(--primary-dark);
+  align-items: center;
+  justify-content: space-between;
 }
 
 .page-header {
@@ -61,6 +65,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  position: relative;
 }
 
 .logo {
