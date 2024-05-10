@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+ 
 }
 
 body {
@@ -447,59 +448,117 @@ li a:hover {
 }
 
 /* skills */
-.skills_container {
-  row-gap: 18rem;
-  padding-top: 1rem;
-  background-color:var(--primary-dark);
+
+.heading{
+   text-align: center;
+   text-decoration: underline;
+   text-underline-offset: 10px;
+   text-decoration-thickness: 5px;
+   margin-bottom: 50px;
 }
 
-.skills_content {
-  background-color: #a6bff2;
-  padding: 1.5rem;
-  border-radius: 1.25rem;
+.horizontal-bars .bar{
+   margin: 40px 0;
+}
+.horizontal-bars .bar:first-child{
+   margin-top: 0;
+}
+.horizontal-bars .bar:last-child{
+   margin-bottom: 0;
+}
+.horizontal-bars .bar .info{
+   margin-bottom: 5px;
+}
+.horizontal-bars .bar .info span{
+   font-size: 17px;
+   font-weight: 500;
+   animation: showText 0.5s 1s linear forwards;   
+   opacity: 0;
 }
 
-.skills_title {
-  font-size: medium;
-  font-weight: medium;
-  color: #FD7014;
-  text-align: center;
-  margin-bottom: 1.5rem;
+.horizontal-bars .bar .progress-line{
+   position: relative;
+   border-radius: 10px;
+   width: 100%;
+   height: 5px;
+   background-color: #000;
+   animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+   transform: scaleX(0);
+   transform-origin: left;
+}
+@keyframes animate{
+   100%{
+       transform: scaleX(1);
+   }
+}
+.horizontal-bars .bar .progress-line span{
+   height: 100%;
+   background-color: #FD7014;
+   position: absolute;
+   border-radius: 10px;
+   animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+   transform: scaleX(0);
+   transform-origin: left;
+}
+.progress-line.html span{
+   width: 90%;
+}
+.progress-line.css span{
+   width: 60%;
+}
+.progress-line.javascript span{
+   width: 45%;
+}
+.progress-line.python span{
+   width: 40%;
 }
 
-.skills_box {
-  display: flex;
-  justify-content: center;
-  column-gap: 2.5rem;
+
+.progress-line span::after{
+   position: absolute;
+   padding: 1px 8px;
+   background-color: #393E46;
+   color: #fff;
+   font-size: 12px;
+   border-radius: 3px;
+   top: -28px;
+   right: -20px;
+   animation: showText 0.5s 1.5s linear forwards;   
+   opacity: 0;
+}
+.progress-line.html span::after{
+   content: "90%";
+}
+.progress-line.css span::after{
+   content: "60%";
+}
+.progress-line.javascript span::after{
+   content: "45%";
+}
+.progress-line.python span::after{
+   content: "40%";
 }
 
-.skills_group {
-  display: grid;
-  align-content: flex-start;
-  row-gap: 1rem;
+.progress-line span::before{
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 0;
+   border: 7px solid transparent;
+   border-bottom-width: 0px;
+   border-right-width: 0px;
+   border-top-color:#000;
+   top: -10px;
+   right: 0;
+   animation: showText 0.5s 1.5s linear forwards;   
+   opacity: 0;
+}
+@keyframes showText{
+   100%{
+       opacity: 1;
+   }
 }
 
-.skills_data {
-  display: flex;
-  column-gap: 0.5rem;
-}
-
-.skills .bxs-badge-check {
-  font-size: 1rem;
-  color: #000205;
-}
-
-.skills_name {
-  font-size: medium;
-  font-weight: 200;
-  line-height: 18px;
-  color:#FD7014;
-}
-
-.skils_level {
-  font-size: small;
-  color: #eb4431;
-}
 
 
 
