@@ -558,6 +558,99 @@ li a:hover {
        opacity: 1;
    }
 }
+.radial-bars{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.radial-bars .radial-bar{
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.radial-bars .radial-bar svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+}
+.radial-bars .radial-bar .progress-bar{
+  stroke-width: 10;
+  stroke: black;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar {
+  100%{
+      stroke-dashoffset: -1;
+  }
+}
+.path{
+  stroke-width: 10;
+  stroke: #FD7014;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
+
+
+@keyframes  animate-path1{
+  100%{
+  stroke-dashoffset: 50;
+  }
+}
+@keyframes  animate-path2{
+  100%{
+  stroke-dashoffset: 175;
+  }
+}
+@keyframes  animate-path3{
+  100%{
+  stroke-dashoffset: 125;
+  }
+}
+@keyframes  animate-path4{
+  100%{
+  stroke-dashoffset: 75;
+  }
+}
+
+.radial-bar .percentage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+
+}
+.radial-bar .text{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
 
 
 
@@ -600,96 +693,96 @@ li a:hover {
 /* education */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 .timeline-section {
-  background-color: #24292d;
-  min-height: 100vh;
-  padding: 100px 15px;
+	background-color: #24292d;
+	min-height: 100vh;
+	padding: 100px 15px;
 }
 .timeline-items {
-  max-width: 1000px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
 }
 .timeline-items::before {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  background-color: #2f363e;
-  left: calc(50% - 1px);
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #2f363e;
+	left: calc(50% - 1px);
 }
 .timeline-item {
-  margin-bottom: 40px;
-  width: 100%;
-  position: relative;
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
 }
 .timeline-item:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 .timeline-item:nth-child(odd) {
-  padding-right: calc(50% + 30px);
-  text-align: right;
+    padding-right: calc(50% + 30px);
+	text-align: right;
 }
 .timeline-item:nth-child(even) {
-  padding-left: calc(50% + 30px);
+    padding-left: calc(50% + 30px);
 }
 .timeline-dot {
-  height: 16px;
-  width: 16px;
-  background-color: #FD7014;
-  position: absolute;
-  left: calc(50% - 8px);
-  border-radius: 50%;
-  top: 10px;
-}
+	height: 16px;
+	width: 16px;
+	background-color: #FD7014;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top: 10px;
+} 
 .timeline-date {
-  font-size: 18px;
-  color: #FD7014;
-  margin: 6px 0 15px;
+	font-size: 18px;
+	color: #FD7014;
+	margin: 6px 0 15px;
 }
 .timeline-content {
   background-color:#393E46;
-  padding: 30px;
-  border-radius: 5px;
+	padding: 30px;
+	border-radius: 5px;
 }
 .timeline-content h3 {
-  font-size: 20px;
-  color: #EEEEEE;
-  margin: 0 0 10px;
-  text-transform: capitalize;
-  font-weight: 500;
+    font-size: 20px;
+	color: #EEEEEE;
+	margin: 0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
 }
 .timeline-content p {
-  color: #FD7014;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
+    color: #FD7014;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
 }
 
 @media (max-width: 767px) {
-  .timeline-items::before {
-    left: 7px;
-  }
-  .timeline-item:nth-child(odd) {
-    padding-right: 0;
-    text-align: left;
-  }
-  .timeline-item:nth-child(odd),
-  .timeline-item:nth-child(even) {
-    padding-left: 37px;
-  }
-  .timeline-dot {
-    left: 0;
-  }
+	.timeline-items::before {
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd) {
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even) {
+		padding-left: 37px;
+	}
+	.timeline-dot {
+		left: 0;
+	}
 }
 
 
