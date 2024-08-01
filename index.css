@@ -396,20 +396,35 @@ li a:hover {
 
 
 /* about */
+/* Container styling */
 .about_container {
-  row-gap: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  flex-wrap: wrap; /* Allow items to wrap for responsiveness */
+}
+
+/* Image styling */
+.about_img_container {
+  flex: 1;
+  min-width: 220px; /* Ensure the image container doesn’t shrink too much */
 }
 
 .about_img {
-  width: 220px;
+  width: 100%; /* Make the image responsive */
+  max-width: 220px; /* Ensure the image doesn’t exceed its original width */
   border-radius: 1.5rem;
-  justify-self: center;
+  display: block;
 }
 
+/* Content styling */
 .about_data {
-  text-align: center;
+  flex: 2;
+  text-align: left;
+  width: 100%; /* Full width on smaller screens */
 }
 
+/* Grid info styling */
 .about_info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -417,36 +432,54 @@ li a:hover {
   margin-bottom: 2rem;
 }
 
+/* Box styling */
 .about_box {
-  background-color:#393E46;
+  background-color: #393E46;
   border-radius: 0.75rem;
-  padding: 0.75rem, 5rem;
+  padding: 0.75rem 1rem;
 }
 
+/* Icon styling */
 .about_icons {
   font-size: 1.5rem;
   color: #FD7014;
   margin-bottom: 0.5rem;
 }
 
+/* Title styling */
 .about_title {
   font-size: medium;
   color: #EEEEEE;
 }
 
+/* Subtitle styling */
 .about_subtitle {
   font-size: small;
   color: #f8f5f5;
 }
 
-.about_discription {
+/* Description styling */
+.about_description {
   margin-bottom: 2rem;
   color: #EEEEEE;
 }
 
-.about .article-title {
-  margin-bottom: 15px;
+/* Responsive styling */
+@media (max-width: 768px) {
+  .about_container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center align items */
+  }
+
+  .about_img_container {
+    margin-bottom: 2rem; /* Add space below the image */
+  }
+
+  .about_data {
+    text-align: center; /* Center align text on smaller screens */
+  }
 }
+
 
 /* skills */
 
