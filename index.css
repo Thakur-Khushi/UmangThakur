@@ -415,6 +415,7 @@ li a:hover {
   max-width: 220px; /* Ensure the image doesn’t exceed its original width */
   border-radius: 1.5rem;
   display: block;
+  height: 100%;
 }
 
 /* Content styling */
@@ -460,8 +461,10 @@ li a:hover {
 
 /* Description styling */
 .about_description {
-  margin-bottom: 2rem;
+  margin: 2rem auto; /* Center horizontally and add vertical margin */
   color: #EEEEEE;
+  max-width: 800px; /* Restrict width for larger screens */
+  text-align: center; /* Center text horizontally */
 }
 
 /* Responsive styling */
@@ -476,11 +479,36 @@ li a:hover {
   }
 
   .about_data {
-    text-align: center; /* Center align text on smaller screens */
+    text-align: flex; /* Center align text on smaller screens */
   }
 }
 
+@media (min-width: 1024px) {
+  .about_img_container {
+    min-width: 300px; /* Adjust the minimum width for larger screens */
+  }
 
+  .about_img {
+    max-width: 300px; /* Increase the maximum width of the image */
+  }
+  .about_description {
+    text-align: center; /* Center the description on larger screens */
+    margin: 2rem auto; /* Center horizontally and add vertical margin */
+  }
+}
+
+@media (min-width: 1440px) {
+  .about_img_container {
+    min-width: 400px; /* Adjust the minimum width for even larger screens */
+  }
+
+  .about_img {
+    max-width: 300px; /* Increase the maximum width of the image */
+  }
+  .about_description {
+    max-width: 800px; /* Restrict width for very large screens */
+  }
+}
 /* skills */
 
 .heading{
