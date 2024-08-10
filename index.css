@@ -12,6 +12,33 @@
   scroll-behavior: smooth;
  
 }
+/* General styles for sections to add a gap between them */
+section {
+  margin-bottom: 10px;
+}
+
+/* Optionally, if you want a bit more spacing for some sections */
+section.container, 
+section.About, 
+section.skills, 
+section.Education, 
+section.portfolio, 
+section.contact {
+  margin-bottom: 20px; /* Adjust this value as needed for extra spacing */
+}
+
+/* Ensure that the spacing works well with other styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Add any additional styling for sections if necessary */
+section {
+  padding: 20px; /* Adjust padding if needed */
+}
+
 
 body {
   font-family: 'Outfit', sans-serif;
