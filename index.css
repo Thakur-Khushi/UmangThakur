@@ -478,18 +478,21 @@ li a:hover {
 .about_title {
   font-size: medium;
   color: #EEEEEE;
+  text-align: center;
 }
 
 /* Subtitle styling */
 .about_subtitle {
   font-size: small;
   color: #f8f5f5;
+  text-align: center;
 }
 
 /* Description styling */
 .about_description {
   margin-bottom: 2rem;
   color: #EEEEEE;
+  text-align: center;
 }
 
 /* Responsive styling */
@@ -807,7 +810,7 @@ li a:hover {
   }
 
   .radial-bar .text { 
-      bottom: -20px; 
+      bottom: -15px; 
       font-size: 14px; 
   }
 
