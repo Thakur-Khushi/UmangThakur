@@ -75,19 +75,19 @@ body {
   margin-bottom: 3rem;
 }
 /* Nav */
+/* Base styles for header */
 header {
   background: var(--primary-dark);
   position: fixed;
   box-shadow: 0 4px 17px rgb(255 255 255 / 10%);
-  position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
-  background: var(--primary-dark);
   align-items: center;
   justify-content: space-between;
 }
 
+/* Styles for the page-header container */
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -96,6 +96,7 @@ header {
   position: relative;
 }
 
+/* Logo styling */
 .logo {
   font-size: 1.5rem;
   font-weight: 800;
@@ -108,6 +109,7 @@ header {
   text-decoration: none;
 }
 
+/* Navigation menu styling */
 ul {
   display: flex;
   gap: .6rem;
@@ -116,6 +118,7 @@ ul {
   overflow: hidden;
 }
 
+/* Navigation links styling */
 li a {
   display: inline-block;
   padding: .3rem 1rem;
@@ -132,11 +135,12 @@ li a {
   animation-delay: calc(.15s * var(--navAni));
 }
 
-/* li a.active, */
+/* Hover state for navigation links */
 li a:hover {
-  color:#eb4431;
+  color: #eb4431;
 }
 
+/* Checkbox and menu styles (hidden by default) */
 #click {
   display: none;
 }
@@ -145,12 +149,38 @@ li a:hover {
   display: none;
 }
 
-.mode i {
-  font-size: 1.4rem;
+/* Icon styling */
+.mainicon {
+  display: block;
   cursor: pointer;
-  color: var(--primary-color);
-  opacity: 0;
-  animation: rightSideAni 1.5s ease forwards;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  ul {
+    display: none; /* Hide the navigation menu by default */
+    flex-direction: column;
+    width: 100%;
+    background: var(--primary-dark);
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    left: 0;
+    box-shadow: 0 4px 17px rgb(255 255 255 / 10%);
+  }
+
+  #click:checked ~ ul {
+    display: flex; /* Show the menu when checkbox is checked */
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .mode i {
+    display: none; /* Optionally hide mode toggle on mobile */
+  }
 }
 
 /* Nav End */
@@ -189,6 +219,9 @@ li a:hover {
   border-radius: 7px;
   margin-top: 2rem;
   cursor: pointer;
+}
+.button button {
+  margin-right: 10px; /* Adjust the value as needed */
 }
 .images {
   margin-left: auto;
