@@ -253,6 +253,13 @@ li a:hover {
   animation: Rotate 20s linear infinite;
   -webkit-animation: Rotate 20s linear infinite;
 }
+.stop-rotation .big-circle {
+  animation-play-state: paused;
+}
+
+.stop-rotation .icon-block img {
+  animation-play-state: paused;
+}
 .icon-block {
   width: 64px;
   height: 64px;
