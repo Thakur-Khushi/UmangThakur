@@ -15,6 +15,7 @@
 /* General styles for sections to add a gap between them */
 section {
   margin-bottom: 10px;
+
 }
 
 /* Optionally, if you want a bit more spacing for some sections */
@@ -25,6 +26,7 @@ section.Education,
 section.portfolio, 
 section.contact {
   margin-bottom: 20px; /* Adjust this value as needed for extra spacing */
+
 }
 
 /* Ensure that the spacing works well with other styles */
@@ -108,6 +110,9 @@ header {
   color: #fff;
   text-decoration: none;
 }
+.logo a:hover{
+  color:#FD7014;
+}
 
 /* Navigation menu styling */
 ul {
@@ -137,7 +142,7 @@ li a {
 
 /* Hover state for navigation links */
 li a:hover {
-  color: #eb4431;
+  color:#FD7014;
 }
 
 /* Checkbox and menu styles (hidden by default) */
@@ -220,8 +225,11 @@ li a:hover {
   margin-top: 2rem;
   cursor: pointer;
 }
+button:hover{
+  background-color: #FD7014;
+}
 .button button {
-  margin-right: 10px; /* Adjust the value as needed */
+  margin-right: 20px; /* Adjust the value as needed */
 }
 .images {
   margin-left: auto;
@@ -462,7 +470,6 @@ li a:hover {
 }
 
 
-/* about */
 /* Container styling */
 .about_container {
   display: flex;
@@ -495,8 +502,8 @@ li a:hover {
 /* Grid info styling */
 .about_info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr); /* Responsive grid columns */
+  gap: 0.5rem; /* Increase gap for better spacing */
   margin-bottom: 2rem;
 }
 
@@ -504,28 +511,32 @@ li a:hover {
 .about_box {
   background-color: #393E46;
   border-radius: 0.75rem;
-  padding: 0.75rem 1rem;
+  padding:0.75rem 1rem; /* Increase padding for better spacing */
+  text-align: center; /* Center align text and icons */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
 }
 
 /* Icon styling */
 .about_icons {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Increase icon size for better visibility */
   color: #FD7014;
   margin-bottom: 0.5rem;
 }
 
 /* Title styling */
 .about_title {
-  font-size: medium;
+  font-size: 1rem; /* Adjust font size */
   color: #EEEEEE;
   text-align: center;
 }
 
 /* Subtitle styling */
 .about_subtitle {
-  font-size: small;
+  font-size: 0.875rem; /* Adjust font size */
   color: #f8f5f5;
-  text-align: center;
+
 }
 
 /* Description styling */
@@ -533,6 +544,8 @@ li a:hover {
   margin-bottom: 2rem;
   color: #EEEEEE;
   text-align: center;
+  max-width: 800px; /* Optional: limit the width of the description */
+  margin: 2rem auto; /* Center horizontally and add vertical margin */
 }
 
 /* Responsive styling */
@@ -547,7 +560,7 @@ li a:hover {
   }
 
   .about_data {
-    text-align: flex; /* Center align text on smaller screens */
+    text-align: center; /* Center align text on smaller screens */
   }
 }
 
@@ -559,6 +572,7 @@ li a:hover {
   .about_img {
     max-width: 300px; /* Increase the maximum width of the image */
   }
+  
   .about_description {
     text-align: center; /* Center the description on larger screens */
     margin: 2rem auto; /* Center horizontally and add vertical margin */
@@ -573,8 +587,9 @@ li a:hover {
   .about_img {
     max-width: 300px; /* Increase the maximum width of the image */
   }
-  
+
 }
+
 /* skills */
 
 .skills { 
