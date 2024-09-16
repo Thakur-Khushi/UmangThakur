@@ -1166,117 +1166,134 @@ margin-bottom: 1.5rem;
   resize: none;
 }
 /*--------------------------------------------------- FOOTER-------------------------------------------------- */
+
 footer {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  background:var(--primary-dark);
+  background-color: #222831;
 }
-footer ul {
-  list-style: none;
+
+.footerContainer {
+  width: 100%;
+  padding: 70px 30px 20px;
+  box-sizing: border-box; /* Ensure padding is included in the element's width/height */
 }
-footer p {
-  color: #fff;
-  max-width: 25em;
-  font-size: 0.9em;
-  line-height: 23px;
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping to the next line if needed */
 }
-footer a {
-  color: #fff;
+
+.socialIcons a {
   text-decoration: none;
-}
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2em;
-}
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  gap: 2em;
-}
-.brand {
-  display: block;
-  font-size: 1.8em;
-  font-weight: 600;
-  margin-bottom: 1em;
-}
-.media-icons li,
-.services-icons li {
-  display: inline-block;
-  margin: 0.5em 0.5em 0.5em 0;
-}
-.media-icons a {
-  font-size: 1.1em;
-  width: 2em;
-  height: 2em;
-  border: 1px #fff solid;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
   border-radius: 50%;
+  transition: background-color 0.5s, color 0.5s; /* Combine transitions for better performance */
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9; /* Use a period instead of a comma */
+}
+
+/* Hover effect on social media icon */
+.socialIcons a:hover {
+  background-color: #111;
+}
+
+.socialIcons a:hover i {
+  color: white;
+}
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
   display: flex;
   justify-content: center;
-  align-items: center;
-  transition: 0.3s;
+  list-style-type: none;
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  flex-wrap: wrap; /* Allows wrapping to the next line if needed */
 }
-.media-icons a:hover {
-  background: #FD7014;
-  color: #111;
+
+.footerNav ul li {
+  margin: 10px; /* Reduced margin for better spacing on smaller screens */
 }
-.services-icons a {
-  font-size: 1.6em;
+
+.footerNav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: opacity 0.5s;
 }
-.services-icons a:hover {
-  color: #FD7014;
+
+.footerNav ul li a:hover {
+  opacity: 1;
 }
-.footer-bottom {
-  display: flex;
-  justify-content: center;
-  border-top: 1px solid rgba(208, 168, 138, 0.36);
-  padding: 2em;
-}
-.footer .menu {
-  margin-bottom: 1em;
-}
-.footer .menu li {
-  display: inline-block;
-  margin: 0 0.7em 0.7em 0;
+
+.footerBottom {
+  background-color: #393E46;
+  padding: 20px;
   text-align: center;
 }
-.footer .menu a {
-  transition: 0.3s;
-  font-weight: 600;
+
+.footerBottom p {
+  color: white;
+  margin: 0; /* Ensure no extra margin around the text */
 }
-.footer .menu a:hover {
-  color: #FD7014;
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0 5px;
 }
-.input-wrap {
-  margin: 1em 0;
-  display: flex;
-}
-.input-wrap input {
-  padding: 0.5em;
-  border: none;
-  background: #20232a;
-  color: #ccc;
-}
-.input-wrap input:focus {
-  outline: none;
-}
-.input-wrap button {
-  padding: 0.8em;
-  background:#FD7014;
-  border: none;
-  color: #eb4431;
-  transition: 0.3s;
-}
-.input-wrap button:hover {
-  background: #fff;
-  color: #111;
-}
-/* == responsive == */
-@media screen and (max-width: 900px) {
-  .footer .container {
+
+@media (max-width: 700px) {
+  .footerNav ul {
     flex-direction: column;
+  }
+
+  .footerNav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0; /* Adjust margin for better spacing */
+  }
+
+  .socialIcons {
+    flex-direction: column; /* Stack social icons vertically */
+    align-items: center; /* Center align icons */
+  }
+
+  .socialIcons a {
+    padding: 8px;
+    margin: 4px;
+  }
+
+  .footerNav ul li a {
+    font-size: 1em; /* Reduce font size for smaller screens */
+  }
+}
+
+/* Optional: Additional responsiveness for very small screens */
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 40px 15px 10px; /* Reduce padding on very small screens */
+  }
+
+  .footerNav ul li a {
+    font-size: 0.9em; /* Further reduce font size if needed */
+  }
+
+  .socialIcons a {
+    padding: 6px;
+    margin: 3px;
   }
 }
 
