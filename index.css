@@ -207,6 +207,8 @@ li a:hover {
   column-gap: 6rem;
   align-items: center;
   height: calc(100vh - 75px);
+  height: auto;
+  margin-top: 2.0rem;
 }
 .main h3 {
   color: #fff;
