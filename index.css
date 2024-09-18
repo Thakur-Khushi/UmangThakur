@@ -15,6 +15,7 @@
   text-decoration: none;
   scroll-behavior: smooth;
   scroll-padding-top: 3.5rem;
+
  
 }
 /* General styles for sections to add a gap between them */
@@ -55,6 +56,8 @@ body {
 /* Genral */
 .container {
   padding: 0 8.4rem;
+  /* margin-left: 10px; */
+  margin-right: 10px;
 }
 
 .img-w {
@@ -969,21 +972,14 @@ button:hover{
 }
 /* -------------------------------------------education----------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-body {
-	font-family: 'Poppins', sans-serif;
-}
+
 .timeline-section {
 	background-color: #24292d;
 	min-height: 100vh;
 	padding: 100px 15px;
 }
 .timeline-items {
-	max-width: 1000px;
+	max-width: 778.4px;
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
@@ -1062,9 +1058,6 @@ body {
 		left: 0;
 	}
 }
-
-
-
 
 /* ----------------------------------------------contact------------------------------------------------- */
 .contact_container{
@@ -1172,9 +1165,11 @@ footer {
 }
 
 .footerContainer {
+  max-width: 1200px; /* Set a max width for the container */
   width: 100%;
   padding: 70px 30px 20px;
-  box-sizing: border-box; /* Ensure padding is included in the element's width/height */
+  box-sizing: border-box; /* Include padding in width */
+  margin: 0 auto; /* Center the container */
 }
 
 .socialIcons {
@@ -1189,13 +1184,13 @@ footer {
   background-color: white;
   margin: 10px;
   border-radius: 50%;
-  transition: background-color 0.5s, color 0.5s; /* Combine transitions for better performance */
+  transition: background-color 0.5s, color 0.5s; /* Combine transitions for performance */
 }
 
 .socialIcons a i {
   font-size: 2em;
   color: black;
-  opacity: 0.9; /* Use a period instead of a comma */
+  opacity: 0.9;
 }
 
 /* Hover effect on social media icon */
@@ -1209,6 +1204,7 @@ footer {
 
 .footerNav {
   margin: 30px 0;
+  text-align: center;
 }
 
 .footerNav ul {
@@ -1221,14 +1217,14 @@ footer {
 }
 
 .footerNav ul li {
-  margin: 10px; /* Reduced margin for better spacing on smaller screens */
+  margin: 10px; /* Adjust margin for better spacing */
 }
 
 .footerNav ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.3em;
-  opacity: 0.7;
+  opacity: 0.9;
   transition: opacity 0.5s;
 }
 
@@ -1244,7 +1240,7 @@ footer {
 
 .footerBottom p {
   color: white;
-  margin: 0; /* Ensure no extra margin around the text */
+  margin: 0; /* No extra margin */
 }
 
 .designer {
@@ -1257,45 +1253,45 @@ footer {
 
 @media (max-width: 700px) {
   .footerNav ul {
-    flex-direction: column;
+      flex-direction: column; /* Stack links vertically on small screens */
+      align-items: center; /* Center align items */
   }
 
   .footerNav ul li {
-    width: 100%;
-    text-align: center;
-    margin: 10px 0; /* Adjust margin for better spacing */
+      margin: 5px 0; /* Adjust margin for better spacing */
   }
 
   .socialIcons {
-    flex-direction: column; /* Stack social icons vertically */
-    align-items: center; /* Center align icons */
+      flex-direction: row; /* Keep social icons in a row on small screens */
+      justify-content: center; /* Center align icons */
   }
 
   .socialIcons a {
-    padding: 8px;
-    margin: 4px;
+      padding: 8px;
+      margin: 4px;
   }
 
   .footerNav ul li a {
-    font-size: 1em; /* Reduce font size for smaller screens */
+      font-size: 1em; /* Reduce font size for smaller screens */
   }
 }
 
 /* Optional: Additional responsiveness for very small screens */
 @media (max-width: 480px) {
   .footerContainer {
-    padding: 40px 15px 10px; /* Reduce padding on very small screens */
+      padding: 40px 15px 10px; /* Reduce padding on very small screens */
   }
 
   .footerNav ul li a {
-    font-size: 0.9em; /* Further reduce font size if needed */
+      font-size: 0.9em; /* Further reduce font size if needed */
   }
 
   .socialIcons a {
-    padding: 6px;
-    margin: 3px;
+      padding: 6px;
+      margin: 3px;
   }
 }
+
 
 
 
