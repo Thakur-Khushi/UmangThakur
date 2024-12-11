@@ -179,7 +179,7 @@ li a:hover {
     position: absolute;
     top: 60px; /* Adjust as needed */
     left: 0;
-    box-shadow: 0 4px 17px rgb(255 255 255 / 10%);
+    box-shadow: 0 4px 17px #000;
   }
 
   #click:checked ~ ul {
@@ -200,7 +200,7 @@ li a:hover {
 /* --------------------------------------Section 1------------------------------------------------- */
 
 .main {
-  padding: 6rem 0;
+  padding: 6rem 0%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
   row-gap: 2rem;
@@ -333,6 +333,9 @@ button:hover{
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
+.detail{
+  padding:0 1.6rem;
+}
 /* keyframe animation */
 
 @keyframes Rotate {
@@ -423,7 +426,8 @@ button:hover{
 
 @media screen and (max-width: 768px) {
   .container {
-      padding: 0 1.6rem;
+      padding: 0 0;
+
   }
 }
 
