@@ -293,7 +293,8 @@ button:hover{
 }
 .icon-block img {
   margin: 0px auto;
-  width: 60%;
+  width: 35px;
+  height: 35px;
   animation: Rotate-reverse 20s linear infinite;
   -webkit-animation: Rotate-reverse 20s linear infinite;
 }
@@ -479,6 +480,10 @@ button:hover{
   }
   .images {
       width: 200px;
+  }
+  .contact_card{
+  margin-left: 2.5px;
+  margin-right: 2.5px;
   }
 }
 
