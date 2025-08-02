@@ -34,4 +34,35 @@ document.addEventListener("DOMContentLoaded", function() {
       icon.addEventListener("mouseout", startAnimations);
     });
   });
-  
+  // Add this to your existing script.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Existing code...
+    
+    // Contact form handling
+    const contactForm = document.querySelector('.contact_form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Here you would typically send the data to a server
+            // For now, we'll just log it and show a success message
+            console.log('Form submitted:', Object.fromEntries(formData));
+            
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
