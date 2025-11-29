@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
       icon.addEventListener("mouseout", startAnimations);
     });
   });
-  // Add this to your existing script.js
+
 document.addEventListener('DOMContentLoaded', function() {
     // Existing code...
     
