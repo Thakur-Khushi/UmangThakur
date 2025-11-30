@@ -1402,31 +1402,33 @@ footer {
   gap: 2rem;
   margin-top: 2rem;
 }
-
-/* Reusable Button Style */
-.button {
-  display: inline-block;
-  background-color: transparent;
-  color: #fd7014;
-  border: 2px solid #fd7014;
-  padding: 0.9rem 1.8rem;
-  font-size: 1.1rem;
+/* Submit Button (Only for Contact Form) */
+.contact-submit {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
   border-radius: 8px;
+  background-color: transparent;
+  border: 2px solid #fd7014;
+  color: #fd7014;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 600;
-  text-align: center;
+  margin-top: 1.5rem;
 }
 
 /* Hover Effect */
-.button:hover {
+.contact-submit:hover {
   background-color: #fd7014;
   color: #222831;
+  box-shadow: 0 0 18px rgba(253, 112, 20, 0.5);
   transform: translateY(-3px);
-  box-shadow: 0 4px 20px rgba(253, 112, 20, 0.4);
 }
 
-/* Optional: Ripple (Click Animation) */
-.button:active {
-  transform: scale(0.95);
+/* Click animation */
+.contact-submit:active {
+  transform: scale(0.96);
 }
