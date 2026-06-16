@@ -724,9 +724,14 @@ ul {
   color: var(--muted);
 }
 
-.footer span {
+.footer span,
+.footer p a {
   color: var(--text);
   font-weight: 700;
+}
+
+.footer p a:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 920px) {
